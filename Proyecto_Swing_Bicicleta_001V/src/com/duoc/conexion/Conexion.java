@@ -13,7 +13,7 @@ public class Conexion {
     private final String USER = "root";
     private final String PASSWORD = "";
     private final String SERVER = "localhost:3306";
-    private final String BBDD = "bbdd_empleados_001";
+    private final String BBDD = "bbdd_bikes";
     
     private Conexion(){
         try
