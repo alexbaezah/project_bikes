@@ -108,7 +108,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,3,-53,0,0,5,2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,3,-53,0,0,5,90"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -452,83 +452,87 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="80" y="520" width="1110" height="400"/>
+          <AbsoluteConstraints x="80" y="520" width="1280" height="400"/>
         </Constraint>
       </Constraints>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabelModeloBicicletas" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jTextFieldModeloBicicletas" min="-2" pref="126" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabelIDBicicletas" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jTextFieldIDBicicletas" min="-2" pref="129" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="jLabelSuspensionBicicletas" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabelTallaBicicletas" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jLabelModeloBicicletas" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextFieldSuspensionBicicletas" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldTallaBicicletas" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="jLabelTransmisionBicicletas" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabelFrenosBicicletas" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTextFieldTransmisionBicicletas" pref="206" max="32767" attributes="0"/>
-                                      <Component id="jTextFieldFrenosBicicletas" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="separate" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="jLabelStockBicicletas" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jTextFieldStockBicicletas" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="jLabelValorBicicletas" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jTextFieldValorBicicletas" min="-2" pref="158" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <Component id="jTextFieldModeloBicicletas" min="-2" pref="126" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jComboBoxIDBicicletas" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldCodigoBicicletas" min="-2" pref="212" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                                  <Component id="jButtonAgregarBicicletas" min="-2" pref="91" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jButtonEditarBicicletas" min="-2" pref="93" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="jButtonEliminarBicicletas" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelIDBicicletas" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldIDBicicletas" min="-2" pref="129" max="-2" attributes="0"/>
                               </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jLabelSuspensionBicicletas" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelTallaBicicletas" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jTextFieldSuspensionBicicletas" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                              <Component id="jTextFieldTallaBicicletas" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jLabelTransmisionBicicletas" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelFrenosBicicletas" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jTextFieldTransmisionBicicletas" pref="206" max="32767" attributes="0"/>
+                              <Component id="jTextFieldFrenosBicicletas" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jLabelStockBicicletas" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelValorBicicletas" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jTextFieldStockBicicletas" alignment="0" min="-2" pref="157" max="-2" attributes="0"/>
+                              <Component id="jTextFieldValorBicicletas" alignment="0" min="-2" pref="158" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jLabelFabricanteBicicletas" max="32767" attributes="0"/>
+                              <Component id="jLabelCategoriaBicicletas" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jTextFieldFabricanteBicicletas" max="32767" attributes="0"/>
+                              <Component id="jTextFieldCategoriaBicicletas" pref="129" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" min="-2" pref="967" max="-2" attributes="0"/>
+                          <Component id="jComboBoxIDBicicletas" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jTextFieldCodigoBicicletas" min="-2" pref="212" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                          <Component id="jButtonAgregarBicicletas" min="-2" pref="91" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jButtonEditarBicicletas" min="-2" pref="93" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="jButtonEliminarBicicletas" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="967" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -536,43 +540,53 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabelIDBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextFieldIDBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabelIDBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldIDBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabelTallaBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldTallaBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelTransmisionBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldTransmisionBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldStockBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelValorBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelFabricanteBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldFabricanteBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabelTallaBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextFieldTallaBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabelTransmisionBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextFieldTransmisionBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabelStockBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextFieldStockBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelModeloBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldModeloBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelSuspensionBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldSuspensionBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelFrenosBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldFrenosBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldValorBicicletas" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelStockBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
                       </Group>
-                  </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelModeloBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextFieldModeloBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="jLabelSuspensionBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextFieldSuspensionBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelFrenosBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextFieldFrenosBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelValorBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextFieldValorBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelCategoriaBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldCategoriaBicicletas" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButtonEditarBicicletas" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
@@ -730,6 +744,23 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Quitar"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelFabricanteBicicletas">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Fabricante"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextFieldFabricanteBicicletas">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldFabricanteBicicletasActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelCategoriaBicicletas">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Categor&#xed;a"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextFieldCategoriaBicicletas">
         </Component>
       </SubComponents>
     </Container>
