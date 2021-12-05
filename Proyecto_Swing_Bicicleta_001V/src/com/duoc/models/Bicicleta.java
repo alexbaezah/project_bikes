@@ -17,7 +17,7 @@ public class Bicicleta {
     public Bicicleta(){
     }
 
-    public Bicicleta(int ID, String modelo, String talla, String suspension, String transmision, String frenos, int stock, int valor, int categoria, int fabricante) {
+    public Bicicleta(int ID, String modelo, String talla, String suspension, String transmision, String frenos, int stock, int valor, int categoria, int fabricante) throws CustomException {
         this.ID = ID;
         this.modelo = modelo;
         this.talla = talla;
