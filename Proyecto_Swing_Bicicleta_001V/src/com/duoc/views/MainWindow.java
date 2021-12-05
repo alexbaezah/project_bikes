@@ -7,6 +7,7 @@ import com.duoc.controllers.FabricanteController;
 import com.duoc.controllers.CategoriaController;
 import com.duoc.models.Bicicleta;
 import com.duoc.models.Categoria;
+import com.duoc.models.CustomException;
 import com.duoc.models.Fabricante;
 import java.awt.HeadlessException;
 import java.sql.ResultSet;
@@ -93,9 +94,9 @@ public class MainWindow extends javax.swing.JFrame {
         jButtonEditarBicicletas = new javax.swing.JButton();
         jButtonEliminarBicicletas = new javax.swing.JButton();
         jLabelFabricanteBicicletas = new javax.swing.JLabel();
-        jTextFieldFabricanteBicicletas = new javax.swing.JTextField();
         jLabelCategoriaBicicletas = new javax.swing.JLabel();
-        jTextFieldCategoriaBicicletas = new javax.swing.JTextField();
+        jComboBoxFabricanteBicicletas = new javax.swing.JComboBox<>();
+        jComboBoxCategoriaBicicletas = new javax.swing.JComboBox<>();
         jMenuBarMain = new javax.swing.JMenuBar();
         jMenuArchivo = new javax.swing.JMenu();
         jMenuArchivoIngresar = new javax.swing.JMenuItem();
@@ -121,6 +122,11 @@ public class MainWindow extends javax.swing.JFrame {
         jLabelNombreFabricantes.setText("Nombre:");
 
         jTextFieldIdFabricantes.setBackground(new java.awt.Color(240, 240, 240));
+        jTextFieldIdFabricantes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldIdFabricantesActionPerformed(evt);
+            }
+        });
 
         jTextFieldNombreFabricantes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,10 +135,25 @@ public class MainWindow extends javax.swing.JFrame {
         });
 
         jButtonAgregarFabricantes.setText("Agregar");
+        jButtonAgregarFabricantes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAgregarFabricantesActionPerformed(evt);
+            }
+        });
 
         jButtonModificarFabricantes.setText("Modificar");
+        jButtonModificarFabricantes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonModificarFabricantesActionPerformed(evt);
+            }
+        });
 
         jButtonQuitarFabricantes.setText("Quitar");
+        jButtonQuitarFabricantes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonQuitarFabricantesActionPerformed(evt);
+            }
+        });
 
         jComboBoxIDFabricantes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Código", "Nombre" }));
         jComboBoxIDFabricantes.setToolTipText("");
@@ -254,10 +275,25 @@ public class MainWindow extends javax.swing.JFrame {
         });
 
         jButtonAgregarCategorias.setText("Agregar");
+        jButtonAgregarCategorias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAgregarCategoriasActionPerformed(evt);
+            }
+        });
 
         jButtonModificarCategorias.setText("Modificar");
+        jButtonModificarCategorias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonModificarCategoriasActionPerformed(evt);
+            }
+        });
 
         jButtonQuitarCategorias.setText("Quitar");
+        jButtonQuitarCategorias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonQuitarCategoriasActionPerformed(evt);
+            }
+        });
 
         jComboBoxIDCategorias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Código", "Nombre" }));
         jComboBoxIDCategorias.setToolTipText("");
@@ -382,6 +418,11 @@ public class MainWindow extends javax.swing.JFrame {
 
         jComboBoxIDBicicletas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Código", "Nombre" }));
         jComboBoxIDBicicletas.setToolTipText("");
+        jComboBoxIDBicicletas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxIDBicicletasActionPerformed(evt);
+            }
+        });
 
         jTextFieldCodigoBicicletas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -457,16 +498,20 @@ public class MainWindow extends javax.swing.JFrame {
         });
 
         jButtonEditarBicicletas.setText("Editar");
-
-        jButtonEliminarBicicletas.setText("Quitar");
-
-        jLabelFabricanteBicicletas.setText("Fabricante");
-
-        jTextFieldFabricanteBicicletas.addActionListener(new java.awt.event.ActionListener() {
+        jButtonEditarBicicletas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldFabricanteBicicletasActionPerformed(evt);
+                jButtonEditarBicicletasActionPerformed(evt);
             }
         });
+
+        jButtonEliminarBicicletas.setText("Quitar");
+        jButtonEliminarBicicletas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEliminarBicicletasActionPerformed(evt);
+            }
+        });
+
+        jLabelFabricanteBicicletas.setText("Fabricante");
 
         jLabelCategoriaBicicletas.setText("Categoría");
 
@@ -475,65 +520,66 @@ public class MainWindow extends javax.swing.JFrame {
         jInternalBicicletasLayout.setHorizontalGroup(
             jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalBicicletasLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
                 .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jInternalBicicletasLayout.createSequentialGroup()
-                        .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jInternalBicicletasLayout.createSequentialGroup()
-                                .addComponent(jLabelModeloBicicletas)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextFieldModeloBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jInternalBicicletasLayout.createSequentialGroup()
-                                .addComponent(jLabelIDBicicletas)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextFieldIDBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(40, 40, 40)
-                        .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabelSuspensionBicicletas)
-                            .addComponent(jLabelTallaBicicletas))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldSuspensionBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldTallaBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(21, 21, 21)
-                        .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabelTransmisionBicicletas)
-                            .addComponent(jLabelFrenosBicicletas))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldTransmisionBicicletas, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
-                            .addComponent(jTextFieldFrenosBicicletas))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabelStockBicicletas)
-                            .addComponent(jLabelValorBicicletas))
-                        .addGap(26, 26, 26)
-                        .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldStockBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldValorBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27)
-                        .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabelFabricanteBicicletas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelCategoriaBicicletas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldFabricanteBicicletas)
-                            .addComponent(jTextFieldCategoriaBicicletas, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)))
-                    .addGroup(jInternalBicicletasLayout.createSequentialGroup()
-                        .addComponent(jComboBoxIDBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextFieldCodigoBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(67, 67, 67)
-                        .addComponent(jButtonAgregarBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonEditarBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
-                        .addComponent(jButtonEliminarBicicletas)))
-                .addContainerGap())
-            .addGroup(jInternalBicicletasLayout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 967, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79))
+                        .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jInternalBicicletasLayout.createSequentialGroup()
+                                .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jInternalBicicletasLayout.createSequentialGroup()
+                                        .addComponent(jLabelModeloBicicletas)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jTextFieldModeloBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jInternalBicicletasLayout.createSequentialGroup()
+                                        .addComponent(jLabelIDBicicletas)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jTextFieldIDBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(40, 40, 40)
+                                .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabelSuspensionBicicletas)
+                                    .addComponent(jLabelTallaBicicletas))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextFieldSuspensionBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldTallaBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(21, 21, 21)
+                                .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabelTransmisionBicicletas)
+                                    .addComponent(jLabelFrenosBicicletas))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextFieldTransmisionBicicletas, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldFrenosBicicletas))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabelStockBicicletas)
+                                    .addComponent(jLabelValorBicicletas))
+                                .addGap(26, 26, 26)
+                                .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextFieldStockBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldValorBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(27, 27, 27)
+                                .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabelFabricanteBicicletas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabelCategoriaBicicletas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jComboBoxFabricanteBicicletas, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxCategoriaBicicletas, 0, 113, Short.MAX_VALUE)))
+                            .addGroup(jInternalBicicletasLayout.createSequentialGroup()
+                                .addComponent(jComboBoxIDBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextFieldCodigoBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(67, 67, 67)
+                                .addComponent(jButtonAgregarBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonEditarBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(30, 30, 30)
+                                .addComponent(jButtonEliminarBicicletas))))
+                    .addGroup(jInternalBicicletasLayout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 967, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         jInternalBicicletasLayout.setVerticalGroup(
             jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -557,7 +603,7 @@ public class MainWindow extends javax.swing.JFrame {
                                     .addComponent(jTextFieldStockBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabelValorBicicletas)
                                     .addComponent(jLabelFabricanteBicicletas)
-                                    .addComponent(jTextFieldFabricanteBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jComboBoxFabricanteBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)))
                         .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -572,8 +618,8 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addComponent(jLabelStockBicicletas))))
                     .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabelCategoriaBicicletas)
-                        .addComponent(jTextFieldCategoriaBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(61, 61, 61)
+                        .addComponent(jComboBoxCategoriaBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(58, 58, 58)
                 .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jInternalBicicletasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButtonEditarBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -702,15 +748,51 @@ public class MainWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldTransmisionBicicletasActionPerformed
 
-    private void jTextFieldFabricanteBicicletasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFabricanteBicicletasActionPerformed
+    private void jButtonAgregarFabricantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarFabricantesActionPerformed
+        registrarFabricante();
+    }//GEN-LAST:event_jButtonAgregarFabricantesActionPerformed
+
+    private void jButtonModificarFabricantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarFabricantesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldFabricanteBicicletasActionPerformed
+    }//GEN-LAST:event_jButtonModificarFabricantesActionPerformed
+
+    private void jButtonQuitarFabricantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuitarFabricantesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonQuitarFabricantesActionPerformed
+
+    private void jButtonAgregarCategoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarCategoriasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAgregarCategoriasActionPerformed
+
+    private void jButtonModificarCategoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarCategoriasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonModificarCategoriasActionPerformed
+
+    private void jButtonQuitarCategoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuitarCategoriasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonQuitarCategoriasActionPerformed
+
+    private void jButtonEditarBicicletasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarBicicletasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonEditarBicicletasActionPerformed
+
+    private void jButtonEliminarBicicletasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarBicicletasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonEliminarBicicletasActionPerformed
+
+    private void jComboBoxIDBicicletasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxIDBicicletasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxIDBicicletasActionPerformed
+
+    private void jTextFieldIdFabricantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIdFabricantesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldIdFabricantesActionPerformed
 
  
     private void estadoInicial(){
         this.jInternalBicicletas.setVisible(false);
         this.jInternalCategorias.setVisible(false);
-        this.jInternalFabricantes.setVisible(false);
+        this.jInternalFabricantes.setVisible(true);
         
     
     }
@@ -724,7 +806,7 @@ public class MainWindow extends javax.swing.JFrame {
             if(fc.create(f))
             {
                 JOptionPane.showMessageDialog(null, "Fabricante registrado satisfactoriamente", "Mensajes", JOptionPane.INFORMATION_MESSAGE);
-                limpiarFormularioRegistroFabricantes();
+                //limpiarFormularioRegistroFabricantes();
                 if(this.jInternalFabricantes.isVisible())
                 {
                     cargarListadoFabricantes();
@@ -763,12 +845,72 @@ public class MainWindow extends javax.swing.JFrame {
     private void cargarListadoFabricantes(){
         try
         {
-            this.jcombo
+            this.jComboBoxFabricanteBicicletas.removeAllItems();
+            ArrayList<Fabricante> fabricantes = fc.readAll();
+            DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+            for(Fabricante f: fabricantes)
+            {
+                modelo.addElement (f);
+            }
+            this.jComboBoxFabricanteBicicletas.setModel(modelo);
+            this.jComboBoxFabricanteBicicletas.setModel(modelo);
+        }
+        catch(Exception ex)
+        {
+            JOptionPane.showMessageDialog(null, "Problemas de conexión a la base de datos", "Mensajes", JOptionPane.ERROR_MESSAGE);
         }
     
     
     
     }
+    
+    private void modificarCargo(){
+        try
+        {
+            int ID = Integer.parseInt(this.jTextFieldCodigoFabricantes.getText());
+            String nombre = this.jTextFieldNombreFabricantes.getText();
+            Fabricante f = new Fabricante(ID, nombre);
+            if(fc.update(f))
+            {
+                JOptionPane.showMessageDialog(null, "Fabricante modificado satisfactoriamente", "mensajes", JOptionPane.INFORMATION_MESSAGE);
+                limpiarFormularioRegistroFabricantes();
+                if(this.jInternalBicicletas.isVisible())
+                {
+                    cargarListadoFabricantes();
+                }
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "No se pudo modificar el Fabricante", "Mensajes", JOptionPane.ERROR_MESSAGE);
+                this.jTextFieldNombreFabricantes.requestFocus();
+                this.jTextFieldNombreFabricantes.selectAll();
+
+            }
+        }
+       catch(CustomException ex)
+        {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "Mensajes", JOptionPane.ERROR_MESSAGE);
+            this.jTextFieldNombreFabricantes.requestFocus();
+            this.jTextFieldNombreFabricantes.selectAll();
+            
+            
+        }
+        catch(NumberFormatException ex)
+        {
+            JOptionPane.showMessageDialog(null, "Debes ingresar un código válido", "Mensajes", JOptionPane.ERROR_MESSAGE);
+            this.jTextFieldNombreFabricantes.requestFocus();
+            this.jTextFieldNombreFabricantes.selectAll();
+        }
+        catch(HeadlessException ex)
+        {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "Mensajes", JOptionPane.ERROR_MESSAGE);
+            this.jTextFieldNombreFabricantes.requestFocus();
+            this.jTextFieldNombreFabricantes.selectAll();
+        }
+    }
+    
+    
+    
     
     
     
@@ -828,6 +970,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButtonModificarFabricantes;
     private javax.swing.JButton jButtonQuitarCategorias;
     private javax.swing.JButton jButtonQuitarFabricantes;
+    private javax.swing.JComboBox<String> jComboBoxCategoriaBicicletas;
+    private javax.swing.JComboBox<String> jComboBoxFabricanteBicicletas;
     private javax.swing.JComboBox<String> jComboBoxIDBicicletas;
     private javax.swing.JComboBox<String> jComboBoxIDCategorias;
     private javax.swing.JComboBox<String> jComboBoxIDFabricantes;
@@ -866,11 +1010,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTableCategorias;
     private javax.swing.JTable jTableFabricantes;
-    private javax.swing.JTextField jTextFieldCategoriaBicicletas;
     private javax.swing.JTextField jTextFieldCodigoBicicletas;
     private javax.swing.JTextField jTextFieldCodigoCategorias;
     private javax.swing.JTextField jTextFieldCodigoFabricantes;
-    private javax.swing.JTextField jTextFieldFabricanteBicicletas;
     private javax.swing.JTextField jTextFieldFrenosBicicletas;
     private javax.swing.JTextField jTextFieldIDBicicletas;
     private javax.swing.JTextField jTextFieldIDCategorias;

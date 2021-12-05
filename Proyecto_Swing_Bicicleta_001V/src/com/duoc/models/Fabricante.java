@@ -18,7 +18,9 @@ public class Fabricante {
     public int getID() {
         return ID;
     }
-
+    
+    
+    // método sirve para descartar string
     public void setID(int ID) throws CustomException {
         String id_caracter = String.valueOf(ID);
         
@@ -30,6 +32,7 @@ public class Fabricante {
             }
             
         }
+        this.ID = ID;
         
     }
 
