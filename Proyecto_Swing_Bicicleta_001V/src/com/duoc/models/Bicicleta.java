@@ -36,9 +36,17 @@ public class Bicicleta {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(int ID) throws CustomException {
+        String id_caracter = String.valueOf(ID);
+        for(int i = 0; i < id_caracter.length(); i++)
+        {
+            if(! Character.isDigit(id_caracter.charAt(i)))
+            {
+                throw new CustomException("Debe ingresar un código numérico");
+            }
+        } 
         this.ID = ID;
-    }
+    }   
 
     public String getModelo() {
         return modelo;

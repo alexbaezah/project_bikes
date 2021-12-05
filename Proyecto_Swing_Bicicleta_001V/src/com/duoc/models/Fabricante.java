@@ -50,7 +50,7 @@ public class Fabricante {
         {
             this.nombre = nombre;
         }
-    }   try
+    }   
     
     @Override
     public String toString(){

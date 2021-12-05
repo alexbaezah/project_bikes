@@ -118,7 +118,7 @@ public class BicicletaController implements iConexion<Bicicleta> {
             }
             return b;
         }
-        catch(SQLException | CustomException ex)
+        catch(SQLException | CustomException  ex)
         {
             return null;
         }
@@ -146,6 +146,27 @@ public class BicicletaController implements iConexion<Bicicleta> {
        {
            return null;
        }
+       finally
+       {
+           CONEXION.cerrarConexion();
+       }
+    }
+    
+    public ResultSet obtenerBicicletaCategoria(){
+        try
+        {
+            ps = CONEXION.getConexion().prepareStatement(SQL_BICICLETAS_W_CATEGORIA);
+            return ps.executeQuery();
+        }
+        catch(SQLException ex)
+        {
+            return null;
+        }
+        finally
+        {
+            CONEXION.cerrarConexion();
+        }
+    
     }
     
             

@@ -55,7 +55,7 @@ public class Categoria {
         {
             this.descripcion = descripcion;
         }
-    }   try
+    }   
     
     @Override
     public String toString(){
