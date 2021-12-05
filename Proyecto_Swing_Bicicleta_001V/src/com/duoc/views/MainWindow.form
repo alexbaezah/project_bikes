@@ -115,7 +115,7 @@
     <Property name="useNullLayout" type="boolean" value="true"/>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JInternalFrame" name="jInternalFrame1">
+    <Container class="javax.swing.JInternalFrame" name="jInternalFabricantes">
       <Properties>
         <Property name="title" type="java.lang.String" value="Fabricantes"/>
         <Property name="visible" type="boolean" value="true"/>
@@ -446,7 +446,7 @@
         </Container>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JInternalFrame" name="jInternalFrame2">
+    <Container class="javax.swing.JInternalFrame" name="jInternalBicicletas">
       <Properties>
         <Property name="visible" type="boolean" value="true"/>
       </Properties>
